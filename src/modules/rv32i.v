@@ -23,6 +23,7 @@ module rv32i (
     // ROM 
     rom instructionMemory (
         .reset(reset),
+        .clk(clk),
         .address(reset ? 5'b0 : pc[6:2]),
         .data(instr)
     );

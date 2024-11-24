@@ -67,9 +67,8 @@ module rv32i_tb;
         reset = 1;
         
         #10
-        @(posedge clk);
         reset = 0;
-
+ 
         // Monitor 
         $monitor("Time=%0t PC=%h Instr=%h ALUResult=%h memWrite=%b",
                  $time, pc, uut.dp.instr, aluResult, memWrite);

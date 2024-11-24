@@ -1,5 +1,6 @@
 module rom (
     input reset,
+    input clk,
     input [4:0] address,
     output reg [31:0] data
 );
@@ -44,7 +45,7 @@ module rom (
     end
 
     // Proceso de lectura de la ROM
-     always @(address or reset) begin
+       always @(address or reset) begin
         if (!reset)  // Activo cuando reset = 0
             data = memory[address];
         else
