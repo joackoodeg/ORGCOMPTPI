@@ -66,7 +66,7 @@ module rv32i_tb;
         clk = 0;
         reset = 1;
         
-        #10
+        #8
         reset = 0;
  
         // Monitor 

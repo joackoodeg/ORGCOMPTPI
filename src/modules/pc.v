@@ -5,9 +5,9 @@ module PC #(parameter N = 32) (
     output reg [N-1:0] pc
 );
 
-    always @(posedge reset or posedge clk ) begin
+    always @(posedge clk ) begin
         if (reset)
-            pc <= 32'h00000000;
+            pc <= 32'hfffffffc;
         else
             pc <= pcNext;
     end
