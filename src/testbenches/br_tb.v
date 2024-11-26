@@ -1,4 +1,3 @@
-`include "../src/modules/br.v"
 
 module tb_BR;
     reg clk;

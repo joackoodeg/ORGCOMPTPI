@@ -1,7 +1,5 @@
 `timescale 1ns / 1ps
 
-`include "../src/modules/mux2x1.v"
-
 module Mux2x1_tb;
 
     reg [31:0] e1;      // Primera entrada

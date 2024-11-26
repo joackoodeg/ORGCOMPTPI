@@ -7,7 +7,7 @@ module PC #(parameter N = 32) (
 
     always @(posedge clk ) begin
         if (reset)
-            pc <= 32'hfffffffc;
+            pc <= 32'hfffffffc; //(-4)
         else
             pc <= pcNext;
     end

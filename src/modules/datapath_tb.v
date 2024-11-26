@@ -8,7 +8,6 @@ module datapath_tb;
     wire [31:0] writeData;
     wire memWrite;
 
-    // DUT instantiation
     dataPath uut (
         .clk(clk),
         .reset(reset),
@@ -20,10 +19,8 @@ module datapath_tb;
         .memWrite(memWrite)
     );
 
-    // Clock generation
     always #5 clk = ~clk;
 
-    // Task for instruction injection
     task execute_instruction;
         input [31:0] new_instr;
         input [8*20:1] instr_name;

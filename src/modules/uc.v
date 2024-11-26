@@ -39,8 +39,8 @@ module UC(
     );
 
     // Señal de pcSrc basada en branch y zero
-    assign pcSrc = (branch & zero) |               // For beq NECERSARIO
-               (op == 7'b1101111);  
+    assign pcSrc = (branch & zero) |               // BEQ
+               (op == 7'b1101111);                  // JAL
 endmodule
 
 /* Unidad de control:

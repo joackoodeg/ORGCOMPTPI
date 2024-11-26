@@ -53,22 +53,22 @@ module mainDeco(
                 aluOp = 2'b10;
             end
             7'b0010011: begin // addi (I-type)
-                regWrite = 1;
-                immSrc = 2'b00;
-                aluSrc = 1;
-                memWrite = 0;
-                resSrc = 0;
-                branch = 0;
-                aluOp = 2'b00;
+                regWrite = 1;   // Escribe en registro destino
+                immSrc = 2'b00; // Formato inmediato tipo-I
+                aluSrc = 1;     // Usa inmediato como segundo operando
+                memWrite = 0;   // No escribe en memoria
+                resSrc = 0;     // Resultado viene de la ALU
+                branch = 0;     // No es salto
+                aluOp = 2'b00;  // Operación suma
             end
             7'b1101111: begin // jal (J-type)
-                regWrite = 1;
-                immSrc = 2'b11;
-                aluSrc = 0;
-                memWrite = 0;
-                resSrc = 0;
-                branch = 1;
-                aluOp = 2'b00;
+                regWrite = 1;   // Guarda dirección de retorno
+                immSrc = 2'b11; // Formato inmediato tipo-J
+                aluSrc = 0;     // No usa inmediato para ALU
+                memWrite = 0;   // No escribe en memoria
+                resSrc = 0;     // Resultado no viene de memoria
+                branch = 1;     // Es un salto
+                aluOp = 2'b00;  // Operación basica
             end
             7'b1100011: begin // beq (branch if equal)
                 regWrite = 0;

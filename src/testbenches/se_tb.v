@@ -1,7 +1,5 @@
 `timescale 1ns / 1ps
 
-`include "../src/modules/se.v"
-
 module SE_tb;
 
     reg [24:0] inm;         // Entrada del inmediato

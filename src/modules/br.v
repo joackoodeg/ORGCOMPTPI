@@ -1,6 +1,6 @@
 module BR #(parameter N = 32) (
     input clk,
-    input [4:0] a1, a2, a3,    // Register addresses
+    input [4:0] a1, a2, a3,    // addresses
     input [N-1:0] wd3,         // Write data
     input we,                   // Write enable
     output [N-1:0] rd1, rd2,    // Read data outputs
@@ -14,7 +14,7 @@ module BR #(parameter N = 32) (
     output [N-1:0] reg_x18
 );
 
-    reg [N-1:0] regFile [0:31]; // 32 registers de 32 bits cada uno
+    reg [N-1:0] regFile [0:31]; // 32 registros de 32 bits cada uno
     
     // DEBUG
     assign reg_x5 = regFile[5];

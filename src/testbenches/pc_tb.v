@@ -2,8 +2,6 @@
 `define DUMPSTR(x) `"x.vcd`"
 `timescale 100 ns / 10 ns
 
-`include "../src/modules/pc.v"
-
 module PC_tb;
 
     //-- Simulation time: 1us (10 * 100ns)

@@ -1,7 +1,5 @@
 `timescale 1ns / 1ps
 
-`include "../src/modules/adder.v"
-
 module Adder_tb;
 
     reg [31:0] op1;  // Primer operando

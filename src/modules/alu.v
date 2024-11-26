@@ -11,7 +11,7 @@ module ALU (
             3'b001: result = srcA - srcB;      // Resta
             3'b010: result = srcA & srcB;      // AND
             3'b011: result = srcA | srcB;      // OR
-            3'b101: result = (srcA < srcB) ? 32'b1 : 32'b0; // Set Less Than (SLT)
+            3'b101: result = ($signed(srcA) < $signed(srcB)) ? 32'b1 : 32'b0; // Set Less Than (SLT)
             default: result = 32'b0;           // Default en caso de error
         endcase
     end

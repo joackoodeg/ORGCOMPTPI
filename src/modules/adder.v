@@ -7,5 +7,3 @@ module Adder (
     assign res = op1 + op2; // Realiza la suma de op1 y op2
 
 endmodule
-
-//CHECK 
